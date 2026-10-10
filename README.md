@@ -186,6 +186,14 @@ The assignment brief supplied with this project does not specify numerical marks
 - The specified rules are directional line-crossing rules, not a general doorway-entry detector; a person's first visible position must be on the expected side of a line for the crossing to be observed.
 - The heatmap counts detection centers from processed frames. People visible for more frames naturally contribute more intensity.
 
+## Output
+<img width="1920" height="1080" alt="heatmap" src="https://github.com/user-attachments/assets/200c5dd4-6039-4b9a-8cef-1b52c2d6e5bd" />
+<img width="1920" height="1080" alt="heatmap_overlay" src="https://github.com/user-attachments/assets/6f6a329c-8aed-40d8-b2d3-19bb2a3c44ab" />
+<img width="1851" height="1008" alt="image" src="https://github.com/user-attachments/assets/639a2c58-7afc-41cb-9210-830cd89efc35" />
+<img width="1851" height="1008" alt="image" src="https://github.com/user-attachments/assets/55e20fc7-fc86-48c7-80c4-71da23b3c47d" />
+
+
+
 ## License
 
 This project scaffold is released under the MIT License. Confirm that the source video and any model weights comply with their own terms before redistribution.
