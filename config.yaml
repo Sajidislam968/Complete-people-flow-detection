@@ -1,0 +1,28 @@
+# All settings can be edited without changing main.py.
+video:
+  source: "https://media.roboflow.com/supervision/video-examples/people-walking.mp4"
+  output_dir: "outputs"
+
+model:
+  weights: "yolo11n.pt"          # Pre-trained Ultralytics COCO detector
+  tracker: "bytetrack.yaml"     # Built-in Ultralytics multi-object tracker
+  classes: [0]                    # COCO class 0 = person
+  confidence: 0.25
+  iou: 0.45
+  image_size: 640
+  device: null                    # null = automatic device selection; e.g. "cpu" or "0"
+
+line_counting:
+  # normalized: x/y are fractions of frame width/height (0.0 to 1.0)
+  # pixel: x/y are actual pixel coordinates copied from PolygonZone
+  coordinate_mode: "normalized"
+  # Format: [x1, y1, x2, y2]. Upper line counts a downward crossing as IN.
+  upper: [0.0, 0.35, 1.0, 0.35]
+  # Lower line counts an upward crossing as OUT.
+  lower: [0.0, 0.65, 1.0, 0.65]
+
+heatmap:
+  point_radius: 5                 # Size of each center-point contribution
+  blur_sigma: 18                  # Higher values create a smoother heatmap
+  overlay_alpha: 0.48             # Heatmap strength in the overlay (0 to 1)
+  endcard_seconds: 3.0            # Final heatmap screen appended to the output video

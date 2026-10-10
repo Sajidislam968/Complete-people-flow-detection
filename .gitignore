@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Model weights (automatically downloaded by Ultralytics)
+*.pt
+
+# Input videos and generated outputs can be large; generate them locally.
+people-walking.mp4
+outputs/*
+!outputs/.gitkeep
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
